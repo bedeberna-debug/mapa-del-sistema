@@ -29,6 +29,11 @@
    "id": "se_aplica_a",
    "etiqueta": "se aplica a (nivel territorial)",
    "color": "#c98a1e"
+  },
+  {
+   "id": "responsable_de",
+   "etiqueta": "responsable de (institución → compromiso)",
+   "color": "#d63384"
   }
  ],
  "temas": [

@@ -1,7 +1,7 @@
 {
  "generado": "mapa-del-sistema fase 1",
- "total_nodos": 80,
- "total_aristas": 228,
+ "total_nodos": 83,
+ "total_aristas": 271,
  "nodos": [
   {
    "id": "cpr",
@@ -865,6 +865,36 @@
    "nombre": "Alianza para el Gobierno Abierto (OGP)",
    "descripcion": "Alianza multilateral a la que Chile se unió con la Carta de Intención de 2011. Exige el modelo de planes de acción de 4 años con actualización de medio término, y evalúa mediante el Mecanismo de Revisión Independiente (IRM), ancestro funcional de la revisión entre pares UNCAC.",
    "fuente_descripcion": "Acervo: fichas que la nombran",
+   "temas": [],
+   "alerta": null,
+   "nota": null
+  },
+  {
+   "id": "inst-minciencia",
+   "tipo": "institucion",
+   "nombre": "Ministerio de Ciencia, Tecnología, Conocimiento e Innovación",
+   "descripcion": "Responsable de los compromisos 1 (plataforma de información científica sobre cambio climático) y 6 («Laboratorio de Instrumentos», experiencia usuaria de instrumentos públicos CTCI) del 6° Plan de Estado Abierto.",
+   "fuente_descripcion": "6° Plan de Estado Abierto 2023-2027, Actualización 2026 (texto oficial)",
+   "temas": [],
+   "alerta": null,
+   "nota": null
+  },
+  {
+   "id": "inst-minenergia",
+   "tipo": "institucion",
+   "nombre": "Ministerio de Energía",
+   "descripcion": "Responsable del compromiso 4 del 6° Plan de Estado Abierto (Plataforma Pobreza Energética), liderado por su División de Acceso y Desarrollo Social.",
+   "fuente_descripcion": "6° Plan de Estado Abierto 2023-2027, Actualización 2026 (texto oficial)",
+   "temas": [],
+   "alerta": null,
+   "nota": null
+  },
+  {
+   "id": "inst-subpesca",
+   "tipo": "institucion",
+   "nombre": "Subsecretaría de Pesca y Acuicultura (SUBPESCA)",
+   "descripcion": "Responsable del compromiso 10 del 6° Plan de Estado Abierto: implementación del estándar internacional FiTI para la transparencia pesquera.",
+   "fuente_descripcion": "6° Plan de Estado Abierto 2023-2027, Actualización 2026 (texto oficial)",
    "temas": [],
    "alerta": null,
    "nota": null
@@ -2550,6 +2580,393 @@
    "tipo": "opera",
    "evidencia": "Carta de Intención de Chile para unirse a la Alianza",
    "ficha_evidencia": 37,
+   "verificada": true
+  },
+  {
+   "origen": "inst-minciencia",
+   "destino": "comp-01",
+   "tipo": "responsable_de",
+   "evidencia": "Líder: Ministerio de Ciencia, Tecnología, Conocimiento e Innovación (MinCiencia)",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-chilecompra",
+   "destino": "comp-02",
+   "tipo": "responsable_de",
+   "evidencia": "Dirección de Compras y Contratación Pública del Estado de Chile",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-cgr",
+   "destino": "comp-03",
+   "tipo": "responsable_de",
+   "evidencia": "Contraloría General de la República",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-minenergia",
+   "destino": "comp-04",
+   "tipo": "responsable_de",
+   "evidencia": "Ministerio de Energía",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-corte-suprema",
+   "destino": "comp-05",
+   "tipo": "responsable_de",
+   "evidencia": "Excma Corte Suprema – Defensoría Penal Pública",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-defensoria",
+   "destino": "comp-05",
+   "tipo": "responsable_de",
+   "evidencia": "Excma Corte Suprema – Defensoría Penal Pública",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-minciencia",
+   "destino": "comp-06",
+   "tipo": "responsable_de",
+   "evidencia": "Ministerio de Ciencia, Tecnología, Conocimiento e Innovación",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-subpesca",
+   "destino": "comp-10",
+   "tipo": "responsable_de",
+   "evidencia": "Subsecretaría de Pesca y Acuicultura",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "inst-congreso",
+   "destino": "comp-11",
+   "tipo": "responsable_de",
+   "evidencia": "Grupo Bicameral de Transparencia, Congreso Nacional",
+   "ficha_evidencia": null,
+   "fuente_evidencia": "6° Plan 2023-2027, Actualización 2026 (texto oficial, _extractos/C/)",
+   "verificada": true
+  },
+  {
+   "origen": "cpr",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20285",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ds-13-2009",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-19880",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-19628",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21719",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21096",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20500",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20730",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21180",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21658",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ds-4-2020",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "dfl-1-2020",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21663",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "plan-6",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "irm-2025",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-19886",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20393",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21595",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-19799",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21634",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-21592",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20205",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20955",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-18834",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "instructivo-005",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "declaracion-ogp-2030",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "uncac",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "convencion-interamericana",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "escazu",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-18575",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "dto-1879-1998",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "ley-20880",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
+   "verificada": true
+  },
+  {
+   "origen": "carta-ogp-2011",
+   "destino": "nivel-nacional",
+   "tipo": "se_aplica_a",
+   "evidencia": "Atributo nivel del nodo (regla mecánica)",
+   "ficha_evidencia": null,
+   "mecanica": true,
    "verificada": true
   },
   {
