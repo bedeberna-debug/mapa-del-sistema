@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa del Sistema — Marco normativo chileno de Gobierno Abierto</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="modo-estudio">
+<header class="barra">
+  <div class="marca">
+    <h1>Mapa del Sistema</h1>
+    <p class="sub">Marco normativo chileno de Gobierno Abierto</p>
+  </div>
+  <nav class="vistas" id="nav-vistas">
+    <a href="#/piramide" data-vista="piramide">Pirámide</a>
+    <a href="#/grafo" data-vista="grafo">Grafo</a>
+    <a href="#/temas" data-vista="temas">Temática</a>
+    <a href="#/tiempo" data-vista="tiempo">Temporal</a>
+  </nav>
+  <span class="chip-version">Versión Estudio</span>
+</header>
+
+<div class="layout">
+  <main id="vista" class="vista"></main>
+  <aside id="panel" class="panel oculto" aria-live="polite">
+    <div class="panel-cab">
+      <button id="panel-cerrar" aria-label="Cerrar panel">✕</button>
+    </div>
+    <div id="panel-contenido" class="panel-contenido"></div>
+  </aside>
+</div>
+
+<footer class="pie">
+  <span id="pie-stats"></span>
+  <span class="pie-nota">⚠️ = dato vivo por verificar antes de publicar. Todo el contenido proviene del acervo documentado del proyecto.</span>
+</footer>
+
+<script src="vendor/d3.v7.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ficha.js"></script>
+<script src="js/vista-piramide.js"></script>
+<script src="js/vista-grafo.js"></script>
+<script src="js/vista-tematica.js"></script>
+<script src="js/vista-temporal.js"></script>
+<script>App.iniciar();</script>
+</body>
+</html>

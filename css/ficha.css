@@ -1,0 +1,12 @@
+/* Estilos para las fichas pre-compiladas cuando se abren sueltas (fuera del panel) */
+body { margin: 0; background: #f5f4ef; font-family: "Segoe UI", system-ui, sans-serif; color: #22303c; }
+main.ficha { max-width: 760px; margin: 2rem auto; background: #fff; padding: 2rem 2.6rem;
+  border: 1px solid #dcd8ce; border-radius: 10px; }
+.ficha h1 { font-size: 1.2rem; line-height: 1.35; }
+.ficha h2 { font-size: 1rem; color: #1e6fd9; margin-top: 1.4rem; }
+.ficha blockquote { margin: .5rem 0; padding: .5rem .9rem; background: #f5f4ef;
+  border-left: 3px solid #dcd8ce; font-size: .82rem; color: #6b7a8d; }
+.ficha li, .ficha p { font-size: .9rem; line-height: 1.55; }
+.ficha code { font-size: .78rem; }
+.ficha hr { border: 0; border-top: 1px solid #dcd8ce; margin: 1.2rem 0 .5rem; }
+.ficha em { font-size: .75rem; color: #6b7a8d; }

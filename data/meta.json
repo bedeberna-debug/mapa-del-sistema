@@ -1,0 +1,100 @@
+{
+ "tipos_arista": [
+  {
+   "id": "modifica",
+   "etiqueta": "modifica",
+   "color": "#d64541"
+  },
+  {
+   "id": "desarrolla_reglamenta",
+   "etiqueta": "desarrolla / reglamenta",
+   "color": "#1e6fd9"
+  },
+  {
+   "id": "complementa",
+   "etiqueta": "complementa",
+   "color": "#6b7a8d"
+  },
+  {
+   "id": "opera",
+   "etiqueta": "opera (norma → institución)",
+   "color": "#8e44ad"
+  },
+  {
+   "id": "da_soporte_a",
+   "etiqueta": "da soporte a (norma → compromiso/ODS)",
+   "color": "#1e9e6a"
+  },
+  {
+   "id": "se_aplica_a",
+   "etiqueta": "se aplica a (nivel territorial)",
+   "color": "#c98a1e"
+  }
+ ],
+ "temas": [
+  {
+   "id": "transparencia",
+   "etiqueta": "Transparencia"
+  },
+  {
+   "id": "participacion",
+   "etiqueta": "Participación"
+  },
+  {
+   "id": "integridad",
+   "etiqueta": "Integridad"
+  },
+  {
+   "id": "digital",
+   "etiqueta": "Digital"
+  },
+  {
+   "id": "datos",
+   "etiqueta": "Datos"
+  }
+ ],
+ "tipos_nodo": [
+  {
+   "id": "norma",
+   "etiqueta": "Norma"
+  },
+  {
+   "id": "institucion",
+   "etiqueta": "Institución"
+  },
+  {
+   "id": "horizonte",
+   "etiqueta": "Horizonte (compromiso / ODS)"
+  },
+  {
+   "id": "nivel",
+   "etiqueta": "Nivel territorial"
+  }
+ ],
+ "alertas_vigencia": [
+  {
+   "nodo": "ley-21719",
+   "alerta": "Vigencia 01-12-2026 — por verificar antes de publicar"
+  },
+  {
+   "nodo": "dfl-1-2020",
+   "alerta": "Fin de vigencia 04-02-2026 — por verificar antes de publicar"
+  },
+  {
+   "nodo": "irm-2025",
+   "alerta": "Versión de pre publicación («no citar o difundir» según la ficha) — verificar versión final antes de citar"
+  },
+  {
+   "nodo": "ley-19886",
+   "alerta": "Transformación por Ley 21.634/2023 en vigencia gradual — verificar estado al publicar"
+  },
+  {
+   "nodo": "ley-21595",
+   "alerta": "Fin de vigencia 24-02-2027 (según LeyChile) — por verificar antes de publicar"
+  },
+  {
+   "nodo": "ley-20880",
+   "alerta": "Modificada por Ley 21.735/2025 con vigencia diferida al 01-03-2027 — por verificar antes de publicar"
+  }
+ ]
+}
