@@ -39,7 +39,7 @@ const VistaGrafo = {
     const radio = { norma: 9, institucion: 8, horizonte: 6, nivel: 7 };
 
     const g = svg.append('g');
-    svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', ev => g.attr('transform', ev.transform)));
+    svg.call(d3.zoom().scaleExtent([0.12, 4]).on('zoom', ev => g.attr('transform', ev.transform)));
 
     svg.append('defs').selectAll('marker').data(app.meta.tipos_arista).join('marker')
       .attr('id', d => `flecha-${d.id}`).attr('viewBox', '0 -5 10 10')
@@ -48,10 +48,10 @@ const VistaGrafo = {
       .append('path').attr('d', 'M0,-5L10,0L0,5').attr('fill', d => d.color);
 
     const sim = d3.forceSimulation(nodos)
-      .force('link', d3.forceLink(aristas).id(d => d.id).distance(70))
-      .force('charge', d3.forceManyBody().strength(-260))
+      .force('link', d3.forceLink(aristas).id(d => d.id).distance(130))
+      .force('charge', d3.forceManyBody().strength(-520))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('colision', d3.forceCollide(16));
+      .force('colision', d3.forceCollide(26));
 
     const link = g.append('g').selectAll('line').data(aristas).join('line')
       .attr('stroke', d => colorArista[d.tipo]).attr('stroke-width', 1.3).attr('stroke-opacity', .6)
