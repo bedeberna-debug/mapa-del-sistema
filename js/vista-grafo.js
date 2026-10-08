@@ -16,16 +16,26 @@ const VistaGrafo = {
       };
       leyenda.appendChild(item);
     });
+    // Filtros de tipo de NODO (clic en el punto de color muestra/oculta el tipo).
+    // "nivel" parte oculto: nivel-nacional concentra ~34 aristas mecánicas
+    // (se_aplica_a) que generan ruido visual; se puede reactivar con un clic.
+    const tiposNodoOff = new Set(['nivel']);
     [['norma', 'var(--c-norma)'], ['institucion', 'var(--c-institucion)'],
      ['horizonte', 'var(--c-horizonte)'], ['nivel', 'var(--c-nivel)']].forEach(([tipo, color]) => {
       const item = document.createElement('span');
-      item.className = 'item';
+      item.className = 'item' + (tiposNodoOff.has(tipo) ? ' apagado' : '');
+      item.title = 'Clic para mostrar / ocultar este tipo de nodo';
       item.innerHTML = `<span class="punto" style="background:${color}"></span>${tipo}`;
+      item.onclick = () => {
+        tiposNodoOff.has(tipo) ? tiposNodoOff.delete(tipo) : tiposNodoOff.add(tipo);
+        item.classList.toggle('apagado');
+        aplicarFiltros();
+      };
       leyenda.appendChild(item);
     });
     const nota = document.createElement('span');
     nota.className = 'meta';
-    nota.textContent = ' Clic en un nodo: resalta vecinos y abre su detalle.';
+    nota.textContent = ' Clic en un nodo: resalta vecinos y abre su detalle. Clic en la leyenda: filtra.';
     leyenda.appendChild(nota);
     cont.appendChild(leyenda);
 
@@ -126,7 +136,15 @@ const VistaGrafo = {
     svg.on('click', () => { seleccion = null; node.classed('atenuado', false); link.classed('atenuado', false); });
 
     function aplicarFiltros() {
-      link.style('display', d => tiposOff.has(d.tipo) ? 'none' : null);
+      const oculto = d => tiposNodoOff.has(d.tipo);
+      node.style('display', d => oculto(d) ? 'none' : null);
+      link.style('display', d => {
+        if (tiposOff.has(d.tipo)) return 'none';
+        const s = d.source.id ? d.source : nodos.find(n => n.id === d.source);
+        const t = d.target.id ? d.target : nodos.find(n => n.id === d.target);
+        return (s && oculto(s)) || (t && oculto(t)) ? 'none' : null;
+      });
     }
+    aplicarFiltros();
   },
 };
