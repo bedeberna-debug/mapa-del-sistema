@@ -47,11 +47,30 @@ const VistaGrafo = {
       .attr('orient', 'auto')
       .append('path').attr('d', 'M0,-5L10,0L0,5').attr('fill', d => d.color);
 
+    // Componentes desconectados (satélites, ej. compromiso + institución sin
+    // aristas al resto): atracción suave al centro para que queden cerca de la
+    // red principal, sin comprimir ésta (fuerza 0 para el componente mayor).
+    const comp = {}; let nComp = 0; const compTam = {};
+    {
+      const adj = {}; nodos.forEach(n => adj[n.id] = []);
+      aristas.forEach(a => { adj[a.origen].push(a.destino); adj[a.destino].push(a.origen); });
+      for (const id in adj) {
+        if (id in comp) continue;
+        const pila = [id]; let tam = 0;
+        while (pila.length) { const x = pila.pop(); if (x in comp) continue; comp[x] = nComp; tam++; adj[x].forEach(y => pila.push(y)); }
+        compTam[nComp] = tam; nComp++;
+      }
+    }
+    const compPrincipal = +Object.entries(compTam).sort((a, b) => b[1] - a[1])[0][0];
+    nodos.forEach(n => n._comp = comp[n.id]);
+
     const sim = d3.forceSimulation(nodos)
       .force('link', d3.forceLink(aristas).id(d => d.id).distance(130))
       .force('charge', d3.forceManyBody().strength(-520))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('colision', d3.forceCollide(26));
+      .force('colision', d3.forceCollide(26))
+      .force('sat-x', d3.forceX(width / 2).strength(d => d._comp === compPrincipal ? 0 : 0.06))
+      .force('sat-y', d3.forceY(height / 2).strength(d => d._comp === compPrincipal ? 0 : 0.06));
 
     const link = g.append('g').selectAll('line').data(aristas).join('line')
       .attr('stroke', d => colorArista[d.tipo]).attr('stroke-width', 1.3).attr('stroke-opacity', .6)
