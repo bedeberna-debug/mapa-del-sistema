@@ -20,6 +20,14 @@ const Ficha = {
     }
   },
 
+  botonPdf(nodo) {
+    if (!nodo.pdf) return '';
+    const etiqueta = nodo.tipo === 'norma' ? 'Ver documento oficial (PDF)' : 'Ver documento de referencia (PDF)';
+    const fuente = nodo.fuente_pdf ? `<span class="ev">Fuente: ${nodo.fuente_pdf}</span>` : '';
+    return `<p class="pdf-cta"><a class="btn-pdf" href="${nodo.pdf}" target="_blank" rel="noopener">
+      <span class="ico">⬇</span> ${etiqueta}</a> ${fuente}</p>`;
+  },
+
   mostrarInfoNodo(nodo, app) {
     app.abrirPanel();
     const cont = document.getElementById('panel-contenido');
@@ -29,7 +37,8 @@ const Ficha = {
     const tipoEt = { institucion: 'Institución', horizonte: 'Horizonte', nivel: 'Nivel territorial' }[nodo.tipo] || nodo.tipo;
     let html = `<h2>${nodo.nombre}${app.badgeAlerta(nodo)}</h2>
       <p class="meta"><span class="chip">${tipoEt}</span>${nodo.subtipo ? `<span class="chip">${nodo.subtipo}</span>` : ''}</p>
-      ${nodo.alerta ? `<p class="alerta">⚠️ ${nodo.alerta}</p>` : ''}`;
+      ${nodo.alerta ? `<p class="alerta">⚠️ ${nodo.alerta}</p>` : ''}
+      ${this.botonPdf(nodo)}`;
     if (nodo.descripcion) {
       html += `<p class="desc">${nodo.descripcion}</p>`;
       if (nodo.fuente_descripcion) html += `<p class="ev">Fuente: ${nodo.fuente_descripcion}</p>`;
@@ -48,7 +57,7 @@ const Ficha = {
   bloqueMeta(nodo, app) {
     const div = document.createElement('div');
     div.className = 'info-nodo';
-    let html = `<dl>`;
+    let html = this.botonPdf(nodo) + `<dl>`;
     if (nodo.anio) html += `<dt>Año</dt><dd>${nodo.anio}</dd>`;
     html += `<dt>Rango</dt><dd>${nodo.rango}</dd>
       <dt>Estado</dt><dd>${nodo.estado}${nodo.alerta ? ` <span class="alerta">⚠️ ${nodo.alerta}</span>` : ''}</dd>

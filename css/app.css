@@ -105,6 +105,19 @@ body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: va
 .btn-ficha { display: inline-block; margin-top: .6rem; background: var(--acento); color: #fff;
   border: 0; padding: .45rem 1rem; border-radius: 8px; cursor: pointer; font-size: .85rem; }
 
+/* --- botón PDF en panel de detalle --- */
+.pdf-cta { margin: .6rem 0; }
+.btn-pdf { display: inline-block; background: var(--acento); color: #fff; text-decoration: none;
+  padding: .45rem .9rem; border-radius: 8px; font-size: .82rem; font-weight: 600; }
+.btn-pdf:hover { filter: brightness(1.1); }
+.btn-pdf .ico { margin-right: .3rem; }
+
+/* --- pie de página --- */
+.pie-creditos { flex-basis: 100%; font-size: .68rem; color: var(--tenue); margin-top: .2rem; }
+.pie-links { margin-left: .5rem; }
+.pie-links a { color: var(--acento); text-decoration: none; }
+.pie-links a:hover { text-decoration: underline; }
+
 /* --- skin ciudadanía --- */
 body.modo-ciudadania { --fondo: #fdfbf6; }
 body.modo-ciudadania .ev,
