@@ -14,9 +14,12 @@ const VistaPiramide = {
     const normas = app.grafo.nodos.filter(n => n.tipo === 'norma');
     cont.innerHTML = `<p class="intro">El marco ordenado por jerarquía normativa. Las normas del nivel
       municipal y regional llevan su distintivo. Clic en cualquier tarjeta para abrir su ficha.</p>`;
+    const asignadas = new Set();
+    const enCapa = (n, capa) =>
+      capa.id === 'internacional' ? n.rango.startsWith('internacional') : n.rango === capa.id;
     for (const capa of this.ORDEN_CAPAS) {
-      const nodos = normas.filter(n =>
-        capa.id === 'internacional' ? n.rango.startsWith('internacional') : n.rango === capa.id);
+      const nodos = normas.filter(n => enCapa(n, capa));
+      nodos.forEach(n => asignadas.add(n.id));
       if (!nodos.length) continue;
       const div = document.createElement('div');
       div.className = 'capa';
@@ -25,6 +28,19 @@ const VistaPiramide = {
       grid.className = 'capa-nodos';
       nodos.sort((a, b) => (a.anio || 0) - (b.anio || 0));
       nodos.forEach(n => grid.appendChild(this.tarjeta(n, app)));
+      div.appendChild(grid);
+      cont.appendChild(div);
+    }
+    // Red de seguridad: ninguna norma queda invisible por rango no clasificado
+    const sueltas = normas.filter(n => !asignadas.has(n.id));
+    if (sueltas.length) {
+      console.warn('Pirámide: normas sin capa clasificada:', sueltas.map(n => `${n.id} (rango "${n.rango}")`));
+      const div = document.createElement('div');
+      div.className = 'capa';
+      div.innerHTML = `<div class="capa-titulo">⚠️ Sin clasificar (${sueltas.length})</div>`;
+      const grid = document.createElement('div');
+      grid.className = 'capa-nodos';
+      sueltas.forEach(n => grid.appendChild(this.tarjeta(n, app)));
       div.appendChild(grid);
       cont.appendChild(div);
     }

@@ -84,7 +84,7 @@ nunca se edita `grafo.json` a mano.
 |---|---|
 | `ficha` | Número de ficha del acervo (1–40) |
 | `anio` | Año de promulgación/emisión (para la vista temporal) |
-| `rango` | `constitucional` \| `orgánica constitucional` \| `ley` \| `decreto` \| `DFL` \| `internacional (...)` \| `soft law` |
+| `rango` | `constitucional` \| `orgánica constitucional` \| `ley` \| `DFL` \| `DS` \| `internacional (...)` \| `soft law` |
 | `grupo` | Grupo del acervo: `A`–`F` |
 | `nivel` | `nacional` \| `regional` \| `municipal` |
 | `estado` | Estado de vigencia en texto libre |
